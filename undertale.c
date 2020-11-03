@@ -165,10 +165,10 @@ int goRoad ( int k, int ns, int ye, int xe, int py, int px, int np, int stime ) 
 }
 
 int main() {
- 	char x, y;
+  char x, y;
 
-	/// clear screen, and draw a black background
-	clearScreen ( 0, 0, 0, 0, 0, MAX_Y, MAX_X );
+  /// clear screen, and draw a black background
+  clearScreen ( 0, 0, 0, 0, 0, MAX_Y, MAX_X );
 
   drawModel ( 25, 65, 88, 85, floweyHappy, 31, 31, 31 );
   drawTextInBox ( 265, "howdy ! i am flowey the flower ! you are new here, arentcha ? well, someone has to teach you how things work around here ! golly, i guess little old me ought to do ! in this world, we share love through little white .friendliness pellets. i.ll share sone with you !" , 110, 20, 220, 130, 10 );
@@ -182,7 +182,7 @@ int main() {
 
   drawModel ( py, px, 5, 5, player, 31, 0, 0 );
 
-	while( k != -1 && k < 40 ) { /// while there are no collisions
+  while( k != -1 && k < 40 ) { /// while there are no collisions
     if ( isKeyPressed( KEY_UP ) == 1 && py > 0 )
       py--;
     if ( isKeyPressed( KEY_DOWN ) == 1 && py + 5 < MAX_Y - 1 )
@@ -205,7 +205,7 @@ int main() {
       g1 = 1;
 
     _sleep ( 12 );
-	}
+  }
 
   if ( k == -1 ) {
     clearScreen ( 31, 0, 0, 0, 0, MAX_Y, MAX_X );
